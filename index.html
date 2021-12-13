@@ -63,43 +63,11 @@ a, a:visited{
 <a href="https://genshin-wishes.com/banners">Genshin Banner Counter</a><br>
 <a href="https://ys-api-os.mihoyo.com/event/download_porter/link/ys_global/genshinimpactpc/default">Genshin</a><br>
 <a href="https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe">Steam Download</a><br>
+<a href="https://www.coinbase.com/price/bitcoin">Bitcoin Price</a><br>
+<a href="https://www.twitch.tv/">Twitch</a><br>
 <a href="#">#</a><br>
 <a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
-<a href="#">#</a><br>
+
 </div>
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script>
@@ -110,8 +78,20 @@ search();
 var search = function(){
 var searchTerms = $("#textinput").val();
 let result =  searchTerms.endsWith(".com");
-if (result == true) {
+let result2 =  searchTerms.endsWith(".ca");
+let result3 =  searchTerms.endsWith(".ca/");
+let result4 =  searchTerms.endsWith(".com/");
+let result5 =  searchTerms.endsWith(".org");
+let result6 =  searchTerms.endsWith(".org/");
+let result7 =  searchTerms.endsWith(".tv");
+let result8 =  searchTerms.endsWith(".tv/");
+let beg =  searchTerms.startsWith("http");
+let beg2 =  searchTerms.startsWith("e");
+if (beg == true || beg2 == true) {
 window.open(searchTerms)    
+}
+else if (result == true || result2 == true || result3 == true || result4 == true || result5 == true || result6 == true || result7 == true || result8 == true) {
+window.open("https://" + searchTerms)    
 }
 else {
 var SearchUrl = "https://www.google.com/search?q=" + searchTerms
