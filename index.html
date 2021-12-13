@@ -6,7 +6,9 @@
     </head>
     <body>
     <style>
-
+a, a:visited{
+     color: #6600cc;
+}
 .grid{
   height:23px;
   position:relative;
@@ -43,7 +45,7 @@
     </style>
   <center>
 <div class="bar">
-      <input class="searchbar" type="text" title="Search">
+      <input class="searchbar" type="text" title="Search" id = "textinput" placeholder = "Search">
       <a href="#"> <img class="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png" title="Search by Voice"></a>
     </div>
 </center> <!-- Search Bar code: https://codepen.io/jitendrarathore/pen/LwPrEp -->
@@ -99,12 +101,22 @@
 <a href="#">#</a><br>
 <a href="#">#</a><br>
 </div>
-<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script>
-var next = function(){
-var typeinthing = $("#googletasksinput").val();
-$("#googletaskschange" + i).text(typeinthing)
-i++;
-$("body").append("<p><span id = googletaskschange" + i + "></span></p>")
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+$("#textinput").keypress(function(){
+if (event.key == "Enter") {
+search();
+}})
+var search = function(){
+var searchTerms = $("#textinput").val();
+let result =  searchTerms.endsWith(".com");
+if (result == true) {
+window.open(searchTerms)    
+}
+else {
+var SearchUrl = "https://www.google.com/search?q=" + searchTerms
+window.open(SearchUrl, "New tab");
+}
 }
 </script>
     </body>
