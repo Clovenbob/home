@@ -147,7 +147,7 @@ a, a:visited{
 <div class="navbar">
 
   <div class="dropdown">
-    <button class="dropbtn">Quick Links
+    <button class="dropbtn" type="checkbox">Quick Links
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
@@ -157,9 +157,6 @@ a, a:visited{
 <a href="https://chrisandriessen.nl/taskbarx">TaskbarX</a><br>
 <a href="https://github.com/">Github Repo</a><br>
 <a href="https://1.1.1.1/Cloudflare_WARP_Release-x64.msi">1.1.1.1</a><br>
-<a href="https://www.youtube.com/">Youtube</a><br>
-<a href="https://genshin-wishes.com/banners">Genshin Banner Counter</a><br>
-<a href="https://ys-api-os.mihoyo.com/event/download_porter/link/ys_global/genshinimpactpc/default">Genshin</a><br>
 <a href="https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe">Steam Download</a><br>
 <a href="https://www.coinbase.com/price/bitcoin">Bitcoin Price</a><br>
 <a href="https://www.twitch.tv/">Twitch</a><br>
@@ -182,13 +179,13 @@ search();
 var search = function(){
 var searchTerms = $("#textinput").val();
 let result =  searchTerms.endsWith(".com");
-let result2 =  searchTerms.endsWith(".ca");
-let result3 =  searchTerms.endsWith(".ca/");
-let result4 =  searchTerms.endsWith(".com/");
-let result5 =  searchTerms.endsWith(".org");
-let result6 =  searchTerms.endsWith(".org/");
-let result7 =  searchTerms.endsWith(".tv");
-let result8 =  searchTerms.endsWith(".tv/");
+let result2 =  searchTerms.includes(".ca");
+let result3 =  searchTerms.includes(".ca/");
+let result4 =  searchTerms.includes(".com/");
+let result5 =  searchTerms.includes(".org");
+let result6 =  searchTerms.includes(".org/");
+let result7 =  searchTerms.includes(".tv");
+let result8 =  searchTerms.includes(".tv/");
 let beg =  searchTerms.startsWith("http");
 if (beg == true) {
 window.open(searchTerms)    
