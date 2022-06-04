@@ -190,8 +190,7 @@ let result6 =  searchTerms.endsWith(".org/");
 let result7 =  searchTerms.endsWith(".tv");
 let result8 =  searchTerms.endsWith(".tv/");
 let beg =  searchTerms.startsWith("http");
-let beg2 =  searchTerms.startsWith("e");
-if (beg == true || beg2 == true) {
+if (beg == true) {
 window.open(searchTerms)    
 }
 else if (result == true || result2 == true || result3 == true || result4 == true || result5 == true || result6 == true || result7 == true || result8 == true) {
